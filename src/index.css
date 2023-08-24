@@ -4,11 +4,96 @@
 @tailwind components;
 @tailwind utilities;
 
+/* root */
+
 * {
-    transition: background 150ms ease-in-out;
+    transition: background 250ms ease-in-out;
     font-family: 'Nunito Sans';
 }
 
+
 .dark {
     background: rgb(22, 29, 39);
+}
+
+/* header */
+
+.header-links a {
+    font-weight: 600;
+    color: rgb(22, 29, 39);
+}
+
+.header-links a:hover {
+    border-bottom: 5px dotted;
+}
+
+.header-link-romantic:hover {
+    color: rgb(177, 87, 165);
+}
+
+.header-link-platonic:hover {
+    color: rgb(87, 125, 177);
+}
+
+.header-link-sentimental:hover {
+    color: rgb(87, 177, 140);
+}
+
+.header-link-random:hover {
+    color: rgb(177, 153, 87);
+}
+
+
+.dark .header-links a {
+    color: rgb(226, 226, 226);
+}
+
+.dark .header-link-romantic:hover {
+    color: rgb(206, 146, 198);
+}
+
+.dark .header-link-platonic:hover {
+    color: rgb(141, 170, 210);
+}
+
+.dark .header-link-sentimental:hover {
+    color: rgb(117, 209, 171);
+}
+
+.dark .header-link-random:hover {
+    color: rgb(215, 193, 130);
+}
+
+/* footer */
+
+.footer-elements {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    margin: 50px auto;
+    min-width: 90%;
+}
+
+.footer-middle {
+    display: flex;
+    justify-content: space-around;
+    align-items: end;
+    font-size: 20px;
+}
+
+.footer-middle a {
+    height: fit-content;
+    color: rgb(55, 55, 55);
+}
+
+.footer-middle a:hover {
+    border-bottom: 4px dotted;
+}
+
+
+.dark .footer-logo h1 {
+    color: rgb(226, 226, 226);
+}
+
+.dark .footer-middle a {
+    color: rgb(190, 190, 190);
 }
