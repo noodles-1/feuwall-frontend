@@ -79,6 +79,9 @@
 
 .footer {
     border-top: 4px solid;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
 }
 
 .footer-elements {
