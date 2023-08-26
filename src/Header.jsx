@@ -1,15 +1,17 @@
-import { Link } from "react-router-dom";
+import { NavLink, Outlet } from "react-router-dom";
 
 const Header = () => {
     return (
         <>
             <div className="flex justify-around my-[50px] text-2xl header-links">
-                <Link to="/general"> General </Link>
-                <Link className="header-link-romantic" to="/romantic"> Romantic </Link>
-                <Link className="header-link-platonic" to="/platonic"> Platonic </Link>
-                <a className="header-link-sentimental" href="#"> Sentimental </a>
-                <a className="header-link-random" href="#"> Random </a>
+                <NavLink to="home"> General </NavLink>
+                <NavLink className="header-link-romantic" to="romantic"> Romantic </NavLink>
+                <NavLink className="header-link-platonic" to="platonic"> Platonic </NavLink>
+                <NavLink className="header-link-sentimental" to="senti"> Sentimental </NavLink>
+                <NavLink className="header-link-random" to="random"> Random </NavLink>
             </div>
+
+            <Outlet />
         </>
     );
 }

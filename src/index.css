@@ -30,20 +30,40 @@
     border-bottom: 5px dotted transparent;
 }
 
+.header-links a.active {
+    border-bottom: 5px dotted;
+}
+
 .header-links a:hover {
     border-bottom: 5px dotted;
+}
+
+.header-links .header-link-romantic.active {
+    color: rgb(177, 87, 165);
 }
 
 .header-link-romantic:hover {
     color: rgb(177, 87, 165);
 }
 
+.header-links .header-link-platonic.active {
+    color: rgb(87, 125, 177);
+}
+
 .header-link-platonic:hover {
     color: rgb(87, 125, 177);
 }
 
+.header-links .header-link-sentimental.active {
+    color: rgb(87, 177, 140);
+}
+
 .header-link-sentimental:hover {
     color: rgb(87, 177, 140);
+}
+
+.header-links .header-link-random.active {
+    color: rgb(177, 153, 87);
 }
 
 .header-link-random:hover {
@@ -59,16 +79,32 @@
     color: rgb(226, 226, 226);
 }
 
+.dark .header-links .header-link-romantic.active {
+    color: rgb(206, 146, 198);
+}
+
 .dark .header-link-romantic:hover {
     color: rgb(206, 146, 198);
+}
+
+.dark .header-links .header-link-platonic.active {
+    color: rgb(141, 170, 210);
 }
 
 .dark .header-link-platonic:hover {
     color: rgb(141, 170, 210);
 }
 
+.dark .header-links .header-link-sentimental.active {
+    color: rgb(117, 209, 171);
+}
+
 .dark .header-link-sentimental:hover {
     color: rgb(117, 209, 171);
+}
+
+.dark .header-links .header-link-random.active {
+    color: rgb(215, 193, 130);
 }
 
 .dark .header-link-random:hover {
