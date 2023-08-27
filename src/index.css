@@ -196,6 +196,43 @@
     background: var(--random);
 }
 
+.note-body {
+    height: 266px;
+    width: 100%;
+    padding: 14px 20px;
+    position: relative;
+}
+
+.note-body h1 {
+    font-weight: 700;
+    margin-bottom: 6px;
+}
+
+.note-story {
+    width: 100%;
+    line-height: 20px;
+    display: -webkit-box;
+    -webkit-line-clamp: 8;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.note-body span {
+    position: absolute;
+    bottom: 26px;
+    right: 20px;
+    border-bottom: 1px solid transparent;
+    line-height: 14px;
+    font-weight: 500;
+    color: rgb(55, 55, 55);
+}
+
+.note-body span:hover {
+    border-bottom: 1px solid;
+    cursor: pointer;
+}
+
 
 .dark .notes-desc {
     color: rgb(190, 190, 190);
@@ -207,6 +244,14 @@
 
 .dark .note-number {
     color: rgb(250, 250, 250);
+}
+
+.dark .note-body {
+    color: rgb(208, 208, 208);
+}
+
+.dark .note-body span {
+    color: rgb(190, 190, 190);
 }
 
 .dark .romantic {
