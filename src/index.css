@@ -6,6 +6,17 @@
 
 /* root */
 
+:root {
+    --romantic: rgb(230, 193, 225);
+    --romantic-dark: rgb(167, 124, 162);
+    --platonic: rgb(174, 194, 224);
+    --platonic-dark: rgb(120, 145, 179);
+    --senti: rgb(161, 226, 199);
+    --senti-dark: rgb(111, 182, 152);
+    --random: rgb(233, 217, 173);
+    --random-dark: rgb(201, 182, 128);
+}
+
 * {
     transition: background 250ms ease-in-out;
     font-family: 'Nunito Sans';
@@ -21,12 +32,18 @@
 .header-links {
     border-bottom: 4px solid;
     padding-bottom: 40px;
+    position: sticky;
+    top: 0;
+    display: flex;
+    justify-content: space-around;
+    padding: 50px 0;
+    background: white;
+    z-index: 10;
 }
 
 .header-links a {
     font-weight: 600;
     color: rgb(22, 29, 39);
-    z-index: 10;
     border-bottom: 5px dotted transparent;
 }
 
@@ -38,93 +55,70 @@
     border-bottom: 5px dotted;
 }
 
-.header-links .header-link-romantic.active {
-    color: rgb(177, 87, 165);
-}
-
+.header-links .header-link-romantic.active, 
 .header-link-romantic:hover {
-    color: rgb(177, 87, 165);
+    color: var(--romantic);
 }
 
-.header-links .header-link-platonic.active {
-    color: rgb(87, 125, 177);
-}
-
+.header-links .header-link-platonic.active,
 .header-link-platonic:hover {
-    color: rgb(87, 125, 177);
+    color: var(--platonic);
 }
 
-.header-links .header-link-sentimental.active {
-    color: rgb(87, 177, 140);
-}
-
+.header-links .header-link-sentimental.active,
 .header-link-sentimental:hover {
-    color: rgb(87, 177, 140);
+    color: var(--senti);
 }
 
-.header-links .header-link-random.active {
-    color: rgb(177, 153, 87);
-}
-
+.header-links .header-link-random.active,
 .header-link-random:hover {
-    color: rgb(177, 153, 87);
+    color: var(--random);
 }
-
 
 .dark .header-links {
     border-bottom: 4px solid rgb(190, 190, 190);
+    background: rgb(22, 29, 39);
 }
 
 .dark .header-links a {
     color: rgb(226, 226, 226);
 }
 
-.dark .header-links .header-link-romantic.active {
-    color: rgb(206, 146, 198);
-}
-
+.dark .header-links .header-link-romantic.active,
 .dark .header-link-romantic:hover {
-    color: rgb(206, 146, 198);
+    color: var(--romantic-dark);
 }
 
-.dark .header-links .header-link-platonic.active {
-    color: rgb(141, 170, 210);
-}
-
+.dark .header-links .header-link-platonic.active,
 .dark .header-link-platonic:hover {
-    color: rgb(141, 170, 210);
+    color: var(--platonic-dark);
 }
 
-.dark .header-links .header-link-sentimental.active {
-    color: rgb(117, 209, 171);
-}
-
+.dark .header-links .header-link-sentimental.active,
 .dark .header-link-sentimental:hover {
-    color: rgb(117, 209, 171);
+    color: var(--senti-dark);
 }
 
-.dark .header-links .header-link-random.active {
-    color: rgb(215, 193, 130);
-}
-
+.dark .header-links .header-link-random.active,
 .dark .header-link-random:hover {
-    color: rgb(215, 193, 130);
+    color: var(--random-dark);
 }
 
 /* footer */
 
 .footer {
     border-top: 4px solid;
-    position: absolute;
+    position: fixed;
     bottom: 0;
     width: 100%;
+    z-index: 10;
+    background: white;
 }
 
 .footer-elements {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     margin: 50px 50px;
-    z-index: 10;
 }
 
 .footer-middle {
@@ -147,6 +141,7 @@
 
 .dark .footer {
     border-top: 4px solid rgb(190, 190, 190);
+    background: rgb(22, 29, 39);
 }
 
 .dark .footer-logo h1 {
@@ -155,4 +150,77 @@
 
 .dark .footer-middle a {
     color: rgb(190, 190, 190);
+}
+
+/* notes layout */
+
+.notes {
+    margin: 0 100px;
+    padding-bottom: 200px;
+}
+
+.notes-desc {
+    color: rgb(55, 55, 55);
+    margin: 40px 16px;
+}
+
+.notes-note {
+    background: rgb(241, 240, 233);
+    height: 300px;
+    width: 300px;
+    margin: 16px 16px;
+}
+
+.note-number {
+    display: flex;
+    justify-content: space-between;
+    padding: 0 16px;
+    font-weight: 700;
+    position: relative;
+    height: 34px;
+}
+
+.romantic {
+    background: var(--romantic);
+}
+
+.platonic {
+    background: var(--platonic);
+}
+
+.senti {
+    background: var(--senti);
+}
+
+.random {
+    background: var(--random);
+}
+
+
+.dark .notes-desc {
+    color: rgb(190, 190, 190);
+}
+
+.dark .notes-note {
+    background: rgb(35, 44, 57);
+}
+
+.dark .note-number {
+    color: rgb(250, 250, 250);
+}
+
+.dark .romantic {
+    background: var(--romantic-dark);
+}
+
+.dark .platonic {
+    background: var(--platonic-dark);
+}
+
+.dark .senti {
+    background: var(--senti-dark);
+}
+
+.dark .random {
+    background: var(--random-dark);
 }
