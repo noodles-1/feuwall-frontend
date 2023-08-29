@@ -1,4 +1,5 @@
 import { CircularProgress } from "@mui/material";
+import { ThemeProvider } from "styled-components";
 import useFetch from "../hooks/useFetch";
 
 const Notes = ({desc, setItem, genre}) => {
@@ -10,7 +11,7 @@ const Notes = ({desc, setItem, genre}) => {
                 <h1 className="notes-desc text-5xl"> {desc} </h1>
                 {isLoading && 
                     <div className="flex justify-center"> 
-                        <CircularProgress color="inherit" /> 
+                        <CircularProgress color="primary" /> 
                     </div>
                 }
                 <div className="flex flex-wrap justify-center items-start">
@@ -27,7 +28,7 @@ const Notes = ({desc, setItem, genre}) => {
                                 <div className="note-story">
                                     {note.body}
                                 </div>
-                                <span onClick={() => setItem('hello')}> read more </span>
+                                <span onClick={() => setItem(note)}> read more </span>
                             </div>
                         </div>
                     ))}
@@ -36,7 +37,7 @@ const Notes = ({desc, setItem, genre}) => {
                 <div className="flex flex-col items-center mt-[100px] notes-show-more">
                     {!isLoading && !isNextLoading && <p> showing {notes.length} items out of {totalRows} </p>}
                     {next && !isNextLoading && <button onClick={loadMoreNotes}> show more </button>}
-                    {isNextLoading && <CircularProgress color="inherit" />}
+                    {isNextLoading && <CircularProgress color="primary" />}
                 </div>
             </div>
         </>

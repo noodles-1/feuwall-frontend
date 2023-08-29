@@ -9,12 +9,12 @@
 :root {
     --romantic: rgb(230, 193, 225);
     --romantic-dark: rgb(167, 124, 162);
-    --platonic: rgb(174, 194, 224);
+    --platonic: rgb(186, 210, 245);
     --platonic-dark: rgb(120, 145, 179);
     --senti: rgb(161, 226, 199);
-    --senti-dark: rgb(111, 182, 152);
+    --senti-dark: rgb(97, 161, 135);
     --random: rgb(233, 217, 173);
-    --random-dark: rgb(201, 182, 128);
+    --random-dark: rgb(164, 141, 84);
 }
 
 * {
@@ -319,17 +319,16 @@
 }
 
 .popup {
-    height: 700px;
-    width: 400px;
+    height: 90%;
+    width: 700px;
     position: fixed;
-    padding: 12px 16px;
+    padding: 100px 80px;
     box-sizing: border-box;
     z-index: 21;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%) scale(0.95);
-    background: rgb(121, 191, 222);
-
+    
     transition: 250ms ease-in-out;
     visibility: hidden;
     opacity: 0;
@@ -344,6 +343,30 @@
     visibility: visible;
     opacity: 1;
     transform: translate(-50%, -50%) scale(1);
+}
+
+.popup-no {
+    text-align: center;
+    font-weight: 700;
+}
+
+.popup-desc {
+    margin-top: 6px;
+    line-height: 26px;
+}
+
+.popup-author {
+    text-align: center;
+    font-weight: 600;
+}
+
+.popup-genre {
+    text-align: center;
+}
+
+
+.dark .popup {
+    color: rgb(255, 255, 255);
 }
 
 /* create confession */
