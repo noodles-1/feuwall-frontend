@@ -422,6 +422,7 @@
     text-align: center;
     width: 100%;
     border-bottom: 3px dashed rgb(144, 144, 144);
+    max-height: 100px;
 }
 
 .submit-body form input[type=radio] {
