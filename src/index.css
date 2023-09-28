@@ -134,6 +134,10 @@
     border-bottom: 4px dotted transparent;
 }
 
+.footer-middle a.active {
+    border-bottom: 4px dotted;
+}
+
 .footer-middle a:hover {
     border-bottom: 4px dotted;
 }
