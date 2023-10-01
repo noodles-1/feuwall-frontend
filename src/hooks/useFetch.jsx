@@ -5,6 +5,7 @@ const useFetch = (genre) => {
     const [next, setNext] = useState(null)
     const [isLoading, setLoading] = useState(true)
     const [isNextLoading, setNextLoading] = useState(false)
+    const [isConnected, setConnected] = useState(true)
     const [totalRows, setTotalRows] = useState(null)
 
     const loadMoreNotes = () => {
@@ -37,14 +38,16 @@ const useFetch = (genre) => {
                 setNext(data.next)
                 setLoading(false)
                 setTotalRows(data.results.total_rows)
+                setConnected(true)
             })
             .catch(err => {
                 console.log(err)
                 setLoading(true)
+                setConnected(false)
             })
     }, [])
 
-    return { notes, next, isLoading, isNextLoading, totalRows, loadMoreNotes };
+    return { notes, next, isLoading, isNextLoading, isConnected, totalRows, loadMoreNotes };
 }
  
 export default useFetch;

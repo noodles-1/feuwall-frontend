@@ -3,15 +3,20 @@ import { ThemeProvider } from "styled-components";
 import useFetch from "../hooks/useFetch";
 
 const Notes = ({desc, setItem, genre}) => {
-    const { notes, next, isLoading, isNextLoading, totalRows, loadMoreNotes } = useFetch(genre)
+    const { notes, next, isLoading, isNextLoading, isConnected, totalRows, loadMoreNotes } = useFetch(genre)
 
     return (
         <>
             <div className="notes">
                 <h1 className="notes-desc text-5xl"> {desc} </h1>
-                {isLoading && 
+                {isLoading && isConnected &&
                     <div className="flex justify-center"> 
                         <CircularProgress color="primary" /> 
+                    </div>
+                }
+                {isLoading && !isConnected &&
+                    <div className="notes-show-more text-center">
+                        <p> cannot connect to the database. </p>
                     </div>
                 }
                 <div className="flex flex-wrap justify-center items-start">
