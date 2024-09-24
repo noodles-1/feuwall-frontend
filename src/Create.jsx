@@ -17,7 +17,7 @@ const Create = () => {
         const data = { author, course, body, genre }
         setLoading(true)
 
-        fetch('/api/post/', {
+        fetch(`${import.meta.env.VITE_SERVER_URL}/post/`, {
             method: 'POST',
             headers: { "Content-Type": "application/json" },
             body: JSON.stringify(data)

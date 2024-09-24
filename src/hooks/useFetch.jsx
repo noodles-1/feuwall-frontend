@@ -16,7 +16,7 @@ const useFetch = (genre) => {
             const params = new URLSearchParams(url.search)
             const page = params.get('page')
 
-            fetch(`/api/get/${genre}/?page=${page}`)
+            fetch(`${import.meta.env.VITE_SERVER_URL}/get/${genre}/?page=${page}`)
                 .then(response => response.json())
                 .then(data => {
                     setNotes(prevNotes => [...prevNotes, ...data.results.data])
@@ -31,8 +31,11 @@ const useFetch = (genre) => {
     }
 
     useEffect(() => {
-        fetch(`/api/get/${genre}/`)
-            .then(response => response.json())
+        fetch(`${import.meta.env.VITE_SERVER_URL}/get/${genre}/`)
+            .then(response => {
+                console.log(response);
+                return response.json();
+            })
             .then(data => {
                 setNotes(data.results.data)
                 setNext(data.next)
